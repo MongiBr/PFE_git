@@ -1,0 +1,24 @@
+type Portfolio {
+  _id: ID!
+  name: String
+  amount: Float
+  user: User!
+}
+
+
+# This type specifies the entry points into our API
+extend type Query {
+  userPortfolios: [Portfolio!]!
+}
+
+input PortfolioInput {
+  name: String
+  amount: String
+}
+
+# The mutation root type, used to define all mutations
+extend type Mutation {
+  newPortfolio(input: PortfolioInput!): Portfolio!
+  editPortfolio(_id: String,input: PortfolioInput!): Portfolio!
+  removePortfolio(_id: ID!): Portfolio!
+}

@@ -1,0 +1,16 @@
+#footer {
+  background-color: #fbfbfb;
+}
+#ftr {
+  background-color: #f4f4f4;
+}
+a:link {
+  color: #757575;
+}
+a:active {
+  color: #fed700;
+}
+a:visited {
+  color: #fed700;
+  text-decoration: none;
+}

@@ -1,0 +1,19 @@
+type Message {
+  _id: ID!
+  content: String!,
+  user: User!
+}
+
+type Query {
+  allMessages: [Message!]!
+  message(_id: ID!): Message!
+}
+
+type Mutation {
+  newMessage(content: String!): Message!
+  removeMessage(_id: ID!): Message!
+}
+
+type Subscription {
+    messageAdded: Message!
+}

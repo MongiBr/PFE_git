@@ -1,0 +1,39 @@
+scalar Date
+
+type Signal {
+  _id: ID!
+  name: String
+  symbol: String
+  cryptoId: String
+  action: String
+  actionPrice: Float
+  takeProfit: Float
+  stopLoss: Float
+  closedAt: Float
+  tradeOpened: Date
+  tradeClosed: Date
+  state: String
+}
+
+
+# This type specifies the entry points into our API
+extend type Query {
+  allSignals: [Signal!]!
+  signal(_id: ID!): Signal!
+}
+
+input NewSignalInput {
+  name: String
+  symbol: String
+  cryptoId: String
+  action: String!
+  actionPrice: Float!
+  takeProfit: Float!
+  stopLoss: Float!
+}
+
+# The mutation root type, used to define all mutations
+extend type Mutation {
+  newSignal(input: NewSignalInput!): Signal!
+  removeSignal(_id: ID!): Signal!
+}

@@ -1,0 +1,36 @@
+# "!" denotes a required field
+# "[]" means this is a list of channels
+
+
+# Define the type of input expected
+
+type User {
+  _id: ID!
+  email: String,
+  avatar: String,
+  firstName: String,
+  LastName: String,
+  location: String,
+  currency: String,
+}
+
+type AuthPayload {
+  token: String!
+  user: User
+}
+
+input UserInput {
+  email: String,
+  avatar: String,
+  firstName: String,
+  LastName: String,
+  location: String,
+  currency: String,
+}
+
+# The mutation root type, used to define all mutations
+extend type Mutation {
+  signup(email: String!, password: String!): AuthPayload,
+  login(email: String!, password: String!): AuthPayload,
+  updateProfile(input: UserInput!): User
+}

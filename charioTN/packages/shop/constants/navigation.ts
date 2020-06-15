@@ -1,0 +1,16 @@
+export const HOME_PAGE = "/";
+export const GROCERY_PAGE = "/grocery";
+export const Food_PAGE = "/foods";
+export const CLOTHING = "/clothing";
+export const BAGS_PAGE = "/bags";
+export const BOOK_PAGE = "/book";
+export const FURNITURE_PAGE = "/furniture";
+export const DETAILS_PAGE = "/detail";
+export const PROCEED_TO_CHECKOUT_PAGE = "/checkout";
+export const REQUEST_MEDICINE_PAGE = "/request-medicine";
+export const PROFILE_PAGE = "/profile";
+export const YOUR_ORDER = "/order";
+export const ORDER_RECEIVED = "/order-received";
+export const OFFER_PAGE = "/offer";
+export const HELP_PAGE = "/help";
+export const Service_Provider = "/serviceprovider";
