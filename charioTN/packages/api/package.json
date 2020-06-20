@@ -2,8 +2,8 @@
   "name": "@pickbazar/api",
   "version": "1.0.0",
   "scripts": {
-    "shop-dev": "ts-node-dev --respawn server.shop.ts",
-    "admin-dev": "ts-node-dev --respawn server.admin.ts",
+    "shop-dev": "ts-node-dev --respawn server.ts",
+    "admin-dev": "ts-node-dev --respawn server.ts",
     "build": "rm -rf dist && mkdir dist && tsc -b && copyfiles -u 1 src/**/*.graphql dist/",
     "serve": "NODE_ENV=production node dist/index.js"
   },

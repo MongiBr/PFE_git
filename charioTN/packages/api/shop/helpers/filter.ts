@@ -1,11 +1,11 @@
-import Fuse from 'fuse.js';
-import { take, drop } from 'lodash';
-import Product from '../services/product/product.type';
-import Coupon from '../services/coupon/coupon.type';
-import Order from '../services/order/order.type';
+import Fuse from "fuse.js";
+import { take, drop } from "lodash";
+import Product from "../services/product/product.type";
+import Coupon from "../services/coupon/coupon.type";
+import Order from "../services/order/order.type";
 
 export const filterItems = (
-  items?: Product[],
+  items?: any,
   limit: number = 10,
   offset: number = 0,
   text?: string,
@@ -18,21 +18,21 @@ export const filterItems = (
   const fuse = new Fuse(items!, {
     threshold: 0.3,
     minMatchCharLength: 2,
-    keys: ['title'],
+    keys: ["title"],
   });
 
-  if (text && text !== '') {
+  if (text && text !== "") {
     filteredItems = fuse.search(text);
   }
   // Type filter
   if (type) {
-    filteredItems = filteredItems.filter(item => item.type === type);
+    filteredItems = filteredItems.filter((item) => item.type === type);
   }
   // Category filter
-  if (category && category.split(',').length) {
+  if (category && category.split(",").length) {
     filteredItems = filteredItems.filter((item: Product) => {
       const isAvailable = item.categories.find((cat: any) =>
-        category.split(',').includes(`${cat.slug}`)
+        category.split(",").includes(`${cat.slug}`)
       );
       if (isAvailable) {
         return true;
@@ -56,15 +56,15 @@ export const filterOrder = async (
 
   // Text filter
   const fuse = new Fuse(items!, {
-    keys: ['id', 'products.title'],
+    keys: ["id", "products.title"],
   });
 
-  if (text && text !== '') {
+  if (text && text !== "") {
     filteredItems = fuse.search(text);
   }
   // Type filter
   if (user) {
-    filteredItems = filteredItems.filter(item => item.userId === user);
+    filteredItems = filteredItems.filter((item) => item.userId === user);
   }
 
   filteredItems = take(filteredItems, limit);
@@ -79,7 +79,7 @@ export const getRelatedItems = async (
   let filteredItems = items!;
   const findRelated = take(
     await filteredItems.filter(
-      item => item.type === type && item.slug !== slug
+      (item) => item.type === type && item.slug !== slug
     ),
     10
   );

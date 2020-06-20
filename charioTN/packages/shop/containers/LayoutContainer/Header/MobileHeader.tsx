@@ -31,7 +31,7 @@ import {
   BAGS_PAGE,
   FURNITURE_PAGE,
   BOOK_PAGE,
-} from "constants/navigation";
+} from "containers/constants/navigation";
 import LanguageContext from "contexts/language/language.context";
 
 import {

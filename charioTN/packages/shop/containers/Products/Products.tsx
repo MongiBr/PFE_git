@@ -22,69 +22,6 @@ import NoResultFound from "components/NoResult/NoResult";
 
 const QuickView = dynamic(() => import("../QuickView/QuickView"));
 
-const produit = [
-  {
-    id: "0",
-    title: "pizza",
-    slug: "0",
-    unit: "0",
-    price: "10",
-    salePrice: "dt",
-    description: "Pizza thon de restaurant sousse ",
-    discountInPercent: "10",
-    type: "produit",
-    image: "../image/back.jpg",
-  },
-  {
-    id: "0",
-    title: "pizza",
-    slug: "0",
-    unit: "0",
-    price: "10",
-    salePrice: "dt",
-    description: "Pizza thon de restaurant sousse ",
-    discountInPercent: "10",
-    type: "produit",
-    image: "../image/back.jpg",
-  },
-  {
-    id: "0",
-    title: "pizza",
-    slug: "0",
-    unit: "0",
-    price: "10",
-    salePrice: "dt",
-    description: "Pizza thon de restaurant sousse ",
-    discountInPercent: "10",
-    type: "produit",
-    image: "../image/back.jpg",
-  },
-  {
-    id: "0",
-    title: "pizza",
-    slug: "0",
-    unit: "0",
-    price: "10",
-    salePrice: "dt",
-    description: "Pizza thon de restaurant sousse ",
-    discountInPercent: "10",
-    type: "produit",
-    image: "../image/back.jpg",
-  },
-  {
-    id: "0",
-    title: "pizza",
-    slug: "0",
-    unit: "0",
-    price: "10",
-    salePrice: "dt",
-    description: "Pizza thon de restaurant sousse ",
-    discountInPercent: "10",
-    type: "produit",
-    image: "../image/back.jpg",
-  },
-];
-
 const GET_PRODUCTS = gql`
   query getProducts(
     $type: String

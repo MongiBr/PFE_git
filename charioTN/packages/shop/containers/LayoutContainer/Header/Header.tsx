@@ -58,7 +58,7 @@ import {
   YOUR_ORDER,
   OFFER_PAGE,
   HELP_PAGE,
-} from "constants/navigation";
+} from "containers/constants/navigation";
 type HeaderProps = {
   style?: any;
   className?: string;
@@ -130,13 +130,6 @@ const Header: React.FC<HeaderProps> = ({
     authDispatch,
   } = useContext<any>(AuthContext);
   const { state, dispatch } = useContext(SearchContext);
-  const [activeMenu, setActiveMenu] = useState(
-    activeMenuItem || {
-      link: GROCERY_PAGE,
-      icon: <FruitsVegetable />,
-      label: "Grocery",
-    }
-  );
 
   const { text } = state;
   const handleSearch = (text: any) => {
@@ -163,23 +156,9 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
   const resetSearch = (selectedMenu: any) => {
-    setActiveMenu(selectedMenu);
     dispatch({
       type: "RESET",
     });
-  };
-  const NavItem = (item: any) => {
-    return (
-      <NavLink
-        key={item.link}
-        onClick={() => resetSearch(item)}
-        className="menu-item"
-        href={item.link}
-        label={item.label}
-        icon={item.icon}
-        iconClass="menu-item-icon"
-      />
-    );
   };
 
   const handleToggleLanguage = (e) => {
@@ -223,11 +202,7 @@ const Header: React.FC<HeaderProps> = ({
   const isHomePage =
     pathname === HOME_PAGE ||
     pathname === GROCERY_PAGE ||
-    pathname === CLOTHING ||
-    pathname === Food_PAGE ||
-    pathname === BOOK_PAGE ||
-    pathname === FURNITURE_PAGE ||
-    pathname === BAGS_PAGE;
+    pathname === Food_PAGE;
 
   return (
     <HeaderWrapper style={style} className={className}>
@@ -247,23 +222,6 @@ const Header: React.FC<HeaderProps> = ({
             </a>
           </Link>
         </Logo>
-        <MainMenu>
-          <Popover
-            className="right"
-            handler={
-              <SelectedType>
-                <span>
-                  <TypeIcon>{activeMenu.icon}</TypeIcon>
-                  <span>{activeMenu.label}</span>
-                </span>
-                <DropDownArrow>
-                  <MenuDown />
-                </DropDownArrow>
-              </SelectedType>
-            }
-            content={<>{MenuArray.map(NavItem)}</>}
-          />
-        </MainMenu>
       </HeaderLeftSide>
       {isHomePage ? (
         <SearchBox

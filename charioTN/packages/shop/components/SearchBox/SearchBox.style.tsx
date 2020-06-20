@@ -187,7 +187,6 @@ export const SearchBoxWrapper = styled.div`
   font-size: ${themeGet("fontSizes.2", "15")}px;
   color: ${themeGet("colors.darkRegular", "#77798C")};
   border: none;
-  background-color: #ffffff;
   border-radius: 6px 6px 6px 6px;
   display: flex;
   align-items: center;

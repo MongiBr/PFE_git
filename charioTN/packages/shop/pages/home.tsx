@@ -1,23 +1,27 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Modal } from "@redq/reuse-modal";
+
 import { withApollo } from "helper/apollo";
 import StoreNav from "components/StoreNav/StoreNav";
+import Carousel from "components/Carousel/Carousel";
+import Banner from "containers/Banner/Banner";
 import Sidebar from "containers/Sidebar/Sidebar";
-import ServiceProviders from "containers/ServiceProviders/ServiceProviders";
-import CartPopUp from "containers/Cart/CartPopUp";
+import Footer from "containers/Footer/Footer";
+import { Modal } from "@redq/reuse-modal";
 import {
   MainContentArea,
-  SidebarSection,
-  ContentSection,
+  OfferSection,
   MobileCarouselDropdown,
 } from "styled/pages.style";
+// Static Data Import Here
+import OFFERS from "data/offers";
+import BannerImg from "image/Chariotn.png";
 import storeType from "containers/constants/storeType";
 
-const PAGE_TYPE = "grocery";
+const PAGE_TYPE = "Home";
 
-function MakeupPage({ deviceType }) {
+function HomePage({ deviceType }) {
   const { query } = useRouter();
   const targetRef = React.useRef(null);
   React.useEffect(() => {
@@ -32,49 +36,44 @@ function MakeupPage({ deviceType }) {
   return (
     <>
       <Head>
-        <title>CharioFood</title>
+        <title>CharioTN</title>
       </Head>
       <Modal>
+        <Banner
+          intlTitleId="groceriesTitle"
+          intlDescriptionId="groceriesSubTitle"
+          imageUrl={BannerImg}
+        />
+
         {deviceType.desktop ? (
           <>
             <MobileCarouselDropdown>
               <StoreNav items={storeType} />
+
               <Sidebar type={PAGE_TYPE} deviceType={deviceType} />
             </MobileCarouselDropdown>
-            <MainContentArea>
-              <SidebarSection>
-                <Sidebar type={PAGE_TYPE} deviceType={deviceType} />
-              </SidebarSection>
-              <ContentSection>
-                <div ref={targetRef}>
-                  <ServiceProviders
-                    type={PAGE_TYPE}
-                    deviceType={deviceType}
-                    fetchLimit={8}
-                  ></ServiceProviders>
-                </div>
-              </ContentSection>
-            </MainContentArea>
+            <OfferSection>
+              <div style={{ margin: "0 -10px" }}>
+                <Carousel deviceType={deviceType} data={OFFERS} />
+              </div>
+            </OfferSection>
           </>
         ) : (
           <MainContentArea>
             <StoreNav items={storeType} />
             <Sidebar type={PAGE_TYPE} deviceType={deviceType} />
-            <ContentSection style={{ width: "100%" }}>
-              <div ref={targetRef}>
-                <ServiceProviders
-                  type={PAGE_TYPE}
-                  deviceType={deviceType}
-                  fetchLimit={8}
-                ></ServiceProviders>
+            <OfferSection>
+              <div style={{ margin: "0 -10px" }}>
+                <Carousel deviceType={deviceType} data={OFFERS} />
               </div>
-            </ContentSection>
+            </OfferSection>
           </MainContentArea>
         )}
-        <CartPopUp deviceType={deviceType} />
       </Modal>
+
+      <Footer />
     </>
   );
 }
 
-export default withApollo(MakeupPage);
+export default withApollo(HomePage);

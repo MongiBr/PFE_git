@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
-import gql from 'graphql-tag';
-import { openModal, closeModal } from '@redq/reuse-modal';
-import ProductCard from 'components/ProductCard/ProductCardFurniture';
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
+import gql from "graphql-tag";
+import { openModal, closeModal } from "@redq/reuse-modal";
+import ProductCard from "components/ProductCard/ProductCard";
 import {
   ProductsRow,
   ProductsCol,
@@ -11,26 +11,26 @@ import {
   LoaderWrapper,
   LoaderItem,
   ProductCardWrapper,
-} from './Products.style';
-import { CURRENCY } from 'helper/constant';
-import { useQuery } from '@apollo/react-hooks';
-import Button from 'components/Button/Button';
-import Loader from 'components/Loader/Loader';
-import Placeholder from 'components/Placeholder/Placeholder';
-import Fade from 'react-reveal/Fade';
-import NoResultFound from 'components/NoResult/NoResult';
+} from "./ServiceProviders.style";
+import { CURRENCY } from "helper/constant";
+import { useQuery } from "@apollo/react-hooks";
+import Button from "components/Button/Button";
+import Loader from "components/Loader/Loader";
+import Placeholder from "components/Placeholder/Placeholder";
+import Fade from "react-reveal/Fade";
+import NoResultFound from "components/NoResult/NoResult";
 
-const QuickView = dynamic(() => import('../QuickView/QuickView'));
+const QuickView = dynamic(() => import("../QuickView/QuickView"));
 
-const GET_PRODUCTS = gql`
-  query getProducts(
+const GET_SERVICE_PROVIDERS = gql`
+  query getServiceProviders(
     $type: String
     $text: String
     $category: String
     $offset: Int
     $limit: Int
   ) {
-    products(
+    serviceProviders(
       type: $type
       text: $text
       category: $category
@@ -38,31 +38,14 @@ const GET_PRODUCTS = gql`
       limit: $limit
     ) {
       items {
-        id
-        title
-        slug
-        unit
-        price
-        salePrice
-        description
-        discountInPercent
-        type
-        image
-        gallery {
-          url
-        }
-        categories {
-          id
-          title
-          slug
-        }
+        name
       }
       hasMore
     }
   }
 `;
 
-type ProductsProps = {
+type ServiceProvidersProps = {
   deviceType?: {
     mobile: boolean;
     tablet: boolean;
@@ -72,7 +55,7 @@ type ProductsProps = {
   fetchLimit?: number;
   loadMore?: boolean;
 };
-export const Products: React.FC<ProductsProps> = ({
+export const ServiceProviders: React.FC<ServiceProvidersProps> = ({
   deviceType,
   type,
   fetchLimit = 8,
@@ -80,44 +63,41 @@ export const Products: React.FC<ProductsProps> = ({
 }) => {
   const router = useRouter();
   const [loadingMore, toggleLoading] = useState(false);
-  const { data, error, loading, fetchMore } = useQuery(GET_PRODUCTS, {
+  const { data, error, loading, fetchMore } = useQuery(GET_SERVICE_PROVIDERS, {
     variables: {
-      type: type,
-      text: router.query.text,
-      category: router.query.category,
       offset: 0,
       limit: fetchLimit,
     },
   });
-
+  console.log(data);
   // Quick View Modal
   const handleModalClose = () => {
     const href = `${router.pathname}`;
-    const as = '/';
+    const as = router.asPath;
     router.push(href, as, { shallow: true });
     closeModal();
   };
   const handleQuickViewModal = React.useCallback(
     (modalProps: any, deviceType: any, onModalClose: any) => {
-      if (router.pathname === '/product/[slug]') {
+      if (router.pathname === "/product/[slug]") {
         const as = `/product/${modalProps.slug}`;
         router.push(router.pathname, as);
         return;
       }
       openModal({
         show: true,
-        overlayClassName: 'quick-view-overlay',
+        overlayClassName: "quick-view-overlay",
         closeOnClickOutside: false,
         component: QuickView,
         componentProps: { modalProps, deviceType, onModalClose },
-        closeComponent: 'div',
+        closeComponent: "div",
         config: {
           enableResizing: false,
           disableDragging: true,
-          className: 'quick-view-modal',
+          className: "quick-view-modal",
           width: 900,
           y: 30,
-          height: 'auto',
+          height: "auto",
           transition: {
             mass: 1,
             tension: 0,
@@ -149,14 +129,18 @@ export const Products: React.FC<ProductsProps> = ({
   }
 
   if (error) return <div>{error.message}</div>;
-  if (!data || !data.products || data.products.items.length === 0) {
+  if (
+    !data ||
+    !data.serviceProviders ||
+    data.serviceProviders.items.length === 0
+  ) {
     return <NoResultFound />;
   }
   const handleLoadMore = () => {
     toggleLoading(true);
     fetchMore({
       variables: {
-        offset: Number(data.products.items.length),
+        offset: Number(data.serviceProviders.items.length),
         limit: fetchLimit,
       },
       updateQuery: (prev, { fetchMoreResult }) => {
@@ -165,10 +149,13 @@ export const Products: React.FC<ProductsProps> = ({
           return prev;
         }
         return {
-          products: {
-            __typename: prev.products.__typename,
-            items: [...prev.products.items, ...fetchMoreResult.products.items],
-            hasMore: fetchMoreResult.products.hasMore,
+          serviceProviders: {
+            __typename: prev.serviceProviders.__typename,
+            items: [
+              ...prev.serviceProviders.items,
+              ...fetchMoreResult.serviceProviders.items,
+            ],
+            hasMore: fetchMoreResult.serviceProviders.hasMore,
           },
         };
       },
@@ -178,18 +165,25 @@ export const Products: React.FC<ProductsProps> = ({
   return (
     <>
       <ProductsRow>
-        {data.products.items.map((item: any, index: number) => (
+        {data.serviceProviders.items.map((item: any, index: number) => (
           <ProductsCol key={index}>
             <ProductCardWrapper>
               <Fade
                 duration={800}
                 delay={index * 10}
-                style={{ height: '100%' }}
+                style={{ height: "100%" }}
               >
                 <ProductCard
-                  title={item.title}
-                  image={item.gallery[0].url}
+                  title={item.name}
+                  description={item.description}
+                  image={item.image}
+                  weight={item.unit}
+                  currency={CURRENCY}
+                  price={item.price}
+                  salePrice={item.salePrice}
                   discountInPercent={item.discountInPercent}
+                  data={item}
+                  deviceType={deviceType}
                   onClick={() =>
                     handleQuickViewModal(item, deviceType, handleModalClose)
                   }
@@ -199,20 +193,20 @@ export const Products: React.FC<ProductsProps> = ({
           </ProductsCol>
         ))}
       </ProductsRow>
-      {loadMore && data.products.hasMore && (
+      {loadMore && data.serviceProviders.hasMore && (
         <ButtonWrapper>
           <Button
             onClick={handleLoadMore}
-            title='Load More'
-            size='small'
+            title="Load More"
+            intlButtonId="loadMoreBtn"
+            size="small"
             isLoading={loadingMore}
-            intlButtonId='loadMoreBtn'
-            loader={<Loader color='#009E7F' />}
+            loader={<Loader color="#fed700" />}
             style={{
               minWidth: 135,
-              backgroundColor: '#ffffff',
-              border: '1px solid #f1f1f1',
-              color: '#009E7F',
+              backgroundColor: "#ffffff",
+              border: "1px solid #f1f1f1",
+              color: "#fed700",
             }}
           />
         </ButtonWrapper>
@@ -220,4 +214,4 @@ export const Products: React.FC<ProductsProps> = ({
     </>
   );
 };
-export default Products;
+export default ServiceProviders;

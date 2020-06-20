@@ -1,38 +1,17 @@
 import InputSearch from "./Input";
 import React, { useEffect, useRef, useState } from "react";
 import SearchResults from "./SearchResults";
-import SearchWrapper, {
-  SearchBoxWrapper,
-  CurrentType,
-} from "./SearchBox.style";
+import SearchWrapper, { SearchBoxWrapper } from "./SearchBox.style";
 import { SearchIcon } from "../AllSvgIcon";
 import Popover from "components/Popover/Popover";
-import SelectPage from "components/Location/DropDown";
-import Button from "components/Button/Button";
-import Dropdown from "components/Dropdown/Dropdown";
-import { openModal } from "@redq/reuse-modal";
-import Select from "components/Select/Select";
-import NavLink from "components/NavLink/NavLink";
-import {
-  FruitsVegetable,
-  MenuDown,
-  FacialCare,
-  DressIcon,
-  Handbag,
-  HelpIcon,
-  BookIcon,
-  FurnitureIcon,
-  DEFlag,
-  CNFlag,
-  USFlag,
-  ILFlag,
-  ESFlag,
-  SAFlag,
-} from "components/AllSvgIcon";
+
+import styled from "styled-components";
+import { FruitsVegetable, MenuDown, FacialCare } from "components/AllSvgIcon";
 import HeaderWrapper, {
   DropDownArrow,
   SelectedType,
   MainMenu,
+  TypeIcon,
 } from "containers/LayoutContainer/Header/Header.style";
 
 type SearchBoxProps = {
@@ -54,6 +33,36 @@ type SearchBoxProps = {
   value?: any;
   pathname?: string;
 };
+
+const MenuArray = [
+  {
+    icon: <FruitsVegetable />,
+    label: "Grocery",
+  },
+  {
+    label: "Foods",
+    icon: <FacialCare />,
+  },
+];
+
+const LocationsArray = [
+  {
+    state: "Sousse",
+    cities: ["Kalaa", "Jaouhra"],
+  },
+  {
+    state: "Tunis",
+    cities: ["Lac", "La fayette"],
+  },
+];
+
+const Icon = styled.span`
+  min-width: 16px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Search: React.FC<SearchBoxProps> = ({
   suggestions,
@@ -117,35 +126,42 @@ const Search: React.FC<SearchBoxProps> = ({
     setSearchValue("");
   };
 
-  const MenuArray = [
-    {
-      label: "Sousse",
-    },
-    {
-      label: "Hamem Sousse",
-    },
-    {
-      label: "Jawhara",
-    },
-    {
-      label: "Sahloul",
-    },
-    {
-      label: "Kalaa Sghira",
-    },
-  ];
-
-  const [activeMenu] = useState({
-    label: "Choose a city",
+  const [activeMenu, setActiveMenu] = useState({
+    icon: <FruitsVegetable />,
+    label: "Grocery",
   });
 
+  const [activeLocation, setActiveLocation] = useState({
+    state: "Choose city",
+    cities: [],
+  });
+  const [activeCity, setActiveCity] = useState("");
+
+  const StateItem = (item: any) => {
+    return (
+      <span
+        key={item.state}
+        onClick={() => {
+          setActiveLocation(item);
+          setActiveCity(item.cities[0]);
+        }}
+      >
+        {item.state}
+      </span>
+    );
+  };
+  const CityItem = (item: any) => {
+    return (
+      <span key={item} onClick={() => setActiveCity(item)}>
+        {item}
+      </span>
+    );
+  };
   const NavItem = (item: any) => {
     return (
-      <NavLink
-        onClick={() => useState(item.label)}
-        label={item.label}
-        href={"grocery"}
-      />
+      <span key={item.label} onClick={() => setActiveMenu(item)}>
+        {item.label}
+      </span>
     );
   };
 
@@ -156,12 +172,51 @@ const Search: React.FC<SearchBoxProps> = ({
           expand === true ? (toggleSearch ? "expanded" : "collapsed") : ""
         } ${minimal === true ? "minimal" : ""}`}
       >
-        {pathname && pathname !== "/" ? (
-          <CurrentType>{ucwords(pathname)}</CurrentType>
-        ) : (
-          <CurrentType>Magasin</CurrentType>
-        )}
-        <InputSearch
+        <Popover
+          className="right"
+          handler={
+            <SelectedType>
+              <span>
+                <span>{activeLocation.state}</span>
+              </span>
+              <DropDownArrow>
+                <MenuDown />
+              </DropDownArrow>
+            </SelectedType>
+          }
+          content={<>{LocationsArray.map(StateItem)}</>}
+        />
+        <Popover
+          className="right"
+          handler={
+            <SelectedType>
+              <span>
+                <span>{activeCity}</span>
+              </span>
+              <DropDownArrow>
+                <MenuDown />
+              </DropDownArrow>
+            </SelectedType>
+          }
+          content={<>{activeLocation.cities.map(CityItem)}</>}
+        />
+
+        <Popover
+          className="right"
+          handler={
+            <SelectedType>
+              <span>
+                <TypeIcon>{activeMenu.icon}</TypeIcon>
+                <span>{activeMenu.label}</span>
+              </span>
+              <DropDownArrow>
+                <MenuDown />
+              </DropDownArrow>
+            </SelectedType>
+          }
+          content={<>{MenuArray.map(NavItem)}</>}
+        />
+        {/* <InputSearch
           type="text"
           value={value}
           onChange={handleSearchInput}
@@ -174,7 +229,7 @@ const Search: React.FC<SearchBoxProps> = ({
           bordered={bordered}
           showSvg={showSvg}
           onClick={() => onClick(searchValue)}
-        />
+        /> */}
       </SearchBoxWrapper>
       {autoSuggestion && toggleSuggestion ? (
         <SearchResults

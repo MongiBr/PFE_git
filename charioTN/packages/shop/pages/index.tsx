@@ -10,7 +10,7 @@ import "mdbreact/dist/css/mdb.css";
 const Index: React.FC = () => {
   const router = useRouter();
   React.useEffect(() => {
-    router.replace("/grocery");
+    router.replace("/home");
   });
   return (
     <Head>

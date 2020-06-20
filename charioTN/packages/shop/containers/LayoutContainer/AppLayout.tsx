@@ -9,12 +9,8 @@ import { useStickyState } from "contexts/app/app.provider";
 import {
   HOME_PAGE,
   GROCERY_PAGE,
-  CLOTHING,
   Food_PAGE,
-  BAGS_PAGE,
-  FURNITURE_PAGE,
-  BOOK_PAGE,
-} from "constants/navigation";
+} from "containers/constants/navigation";
 const MobileHeader = dynamic(() => import("./Header/MobileHeader"), {
   ssr: false,
 });
@@ -51,11 +47,8 @@ const Layout: FunctionComponent<LayoutProps> = ({
   const isHomePage =
     pathname === HOME_PAGE ||
     pathname === GROCERY_PAGE ||
-    pathname === CLOTHING ||
-    pathname === Food_PAGE ||
-    pathname === BOOK_PAGE ||
-    pathname === FURNITURE_PAGE ||
-    pathname === BAGS_PAGE;
+    pathname === Food_PAGE;
+
   return (
     <LayoutWrapper className={`layoutWrapper ${className}`}>
       {(mobile || tablet) && (

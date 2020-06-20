@@ -66,11 +66,11 @@ const ContentSection = styled.div`
   }
 
   @media (max-width: 1199px) and (min-width: 991px) {
-    padding: 15px 30px 50px;
+    padding: 70px 30px 50px;
   }
 
   @media (max-width: 1367px) and (min-width: 1200px) {
-    padding: 15px 30px 50px;
+    padding: 70px 30px 50px;
   }
 
   @media (max-width: 990px) {
