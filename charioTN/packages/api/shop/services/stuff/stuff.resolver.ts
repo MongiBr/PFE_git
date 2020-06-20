@@ -1,36 +1,36 @@
-import { Resolver, Query, Arg, ID, Mutation } from 'type-graphql';
-import Stuff from './stuff.type';
-import loadStuffs from '../../data/stuff.data';
-import AddStuffInput from './stuff.input_type';
-import search from '../../helpers/search';
+import { Resolver, Query, Arg, ID, Mutation } from "type-graphql";
+import Stuff from "./stuff.type";
+import loadStuffs from "../../data/stuff.data";
+import AddStuffInput from "./stuff.input_type";
+import search from "../../helpers/search";
 @Resolver()
 export default class StuffResolver {
   private readonly stuffsCollection: Stuff[] = loadStuffs();
 
   @Query(() => [Stuff])
   async stuffs(
-    @Arg('role', { nullable: true }) role?: string,
-    @Arg('searchBy', { nullable: true }) searchBy?: string
+    @Arg("role", { nullable: true }) role?: string,
+    @Arg("searchBy", { nullable: true }) searchBy?: string
   ): Promise<Stuff[] | undefined> {
     // as auth Stuff. check from middleware.
     let stuffs = this.stuffsCollection;
     if (role) {
       stuffs = stuffs.filter(
-        stuff => stuff.role.toLowerCase() === role.toLowerCase()
+        (stuff) => stuff.role.toLowerCase() === role.toLowerCase()
       );
     }
-    return await search(stuffs, ['name'], searchBy);
+    return await search(stuffs, ["name"], searchBy);
   }
   @Query(() => Stuff)
-  async stuff(@Arg('id', type => ID) id: string): Promise<Stuff | undefined> {
+  async stuff(@Arg("id", (type) => ID) id: string): Promise<Stuff | undefined> {
     // as auth Stuff. check from middleware.
-    console.log(id, 'stuff_id');
-    return await this.stuffsCollection.find(stuff => stuff.id === id);
+    console.log(id, "stuff_id");
+    return await this.stuffsCollection.find((stuff) => stuff.id === id);
   }
 
-  @Mutation(() => Stuff, { description: 'Create Stuff' })
-  async createStuff(@Arg('stuff') stuff: AddStuffInput): Promise<Stuff> {
-    console.log(stuff, 'Stuff');
+  @Mutation(() => Stuff, { description: "Create Stuff" })
+  async createStuff(@Arg("stuff") stuff: AddStuffInput): Promise<Stuff> {
+    console.log(stuff, "Stuff");
     return await stuff;
   }
 

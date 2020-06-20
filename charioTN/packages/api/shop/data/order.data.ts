@@ -1,5 +1,5 @@
 import { plainToClass } from "class-transformer";
-import Order from "../services/order/order.type";
+import Order from "../../admin/services/order/order.type";
 
 const loadOrders = (): Order[] => {
   return plainToClass(Order, [
@@ -22,7 +22,7 @@ const loadOrders = (): Order[] => {
           weight: "2lb",
           price: 50,
           image: "https://picsum.photos/200/300",
-          quantity: 2
+          quantity: 2,
         },
         {
           id: 2,
@@ -30,10 +30,10 @@ const loadOrders = (): Order[] => {
           image: "https://picsum.photos/200/300",
           weight: "2lb",
           price: 100,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
-      status: "delivered"
+      status: "delivered",
     },
     {
       id: 2,
@@ -56,7 +56,7 @@ const loadOrders = (): Order[] => {
           image: "https://picsum.photos/200/300",
           weight: "2lb",
           price: 50,
-          quantity: 3
+          quantity: 3,
         },
         {
           id: 2,
@@ -64,10 +64,10 @@ const loadOrders = (): Order[] => {
           image: "https://picsum.photos/200/300",
           weight: "2lb",
           price: 50,
-          quantity: 3
-        }
+          quantity: 3,
+        },
       ],
-      status: "pending"
+      status: "pending",
     },
     {
       id: 3,
@@ -90,7 +90,7 @@ const loadOrders = (): Order[] => {
           image: "https://picsum.photos/200/300",
           weight: "2lb",
           price: 50,
-          quantity: 3
+          quantity: 3,
         },
         {
           id: 2,
@@ -98,10 +98,10 @@ const loadOrders = (): Order[] => {
           image: "https://picsum.photos/200/300",
           weight: "2lb",
           price: 50,
-          quantity: 3
-        }
+          quantity: 3,
+        },
       ],
-      status: "failed"
+      status: "failed",
     },
 
     {
@@ -126,7 +126,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/air_freshner_acana_ozmo.jpg",
           weight: "2lb",
           price: 5,
-          quantity: 30
+          quantity: 30,
         },
         {
           id: 274,
@@ -135,10 +135,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/pest_control_kritterkill.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 3
-        }
+          quantity: 3,
+        },
       ],
-      status: "delivered"
+      status: "delivered",
     },
 
     {
@@ -163,7 +163,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/oil_clover_valley.jpg",
           weight: "2lb",
           price: 5,
-          quantity: 30
+          quantity: 30,
         },
         {
           id: 323,
@@ -171,10 +171,10 @@ const loadOrders = (): Order[] => {
           image: "http://s3.amazonaws.com/redqteam.com/pickbazar/oil_daisy.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
-      status: "failed"
+      status: "failed",
     },
     {
       id: 6,
@@ -198,7 +198,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/Ballymaloe_Mayonnaise_240g.jpg",
           weight: "2lb",
           price: 5,
-          quantity: 30
+          quantity: 30,
         },
         {
           id: 398,
@@ -206,10 +206,10 @@ const loadOrders = (): Order[] => {
           image: "http://s3.amazonaws.com/redqteam.com/pickbazar/oil_daisy.jpg",
           weight: "2lb",
           price: 5,
-          quantity: 10
-        }
+          quantity: 10,
+        },
       ],
-      status: "processing"
+      status: "processing",
     },
     {
       id: 7,
@@ -233,7 +233,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/spadet_Deodorant.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 4
+          quantity: 4,
         },
         {
           id: 464,
@@ -242,10 +242,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/attitude_night_bubble_bath.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 6
-        }
+          quantity: 6,
+        },
       ],
-      status: "processing"
+      status: "processing",
     },
     {
       id: 8,
@@ -269,7 +269,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/nature's_gift_basmati_rice.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 4
+          quantity: 4,
         },
         {
           id: 266,
@@ -278,10 +278,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/laundry_products_ecos.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 6
-        }
+          quantity: 6,
+        },
       ],
-      status: "delivered"
+      status: "delivered",
     },
     {
       id: 9,
@@ -305,7 +305,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/dishwasher_winni's_bango_schiuma.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 1
+          quantity: 1,
         },
         {
           id: 252,
@@ -314,10 +314,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/kitchen_accessories_camp_cutlery.jpg",
           weight: "2lb",
           price: 150,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
-      status: "processing"
+      status: "processing",
     },
     {
       id: 10,
@@ -341,7 +341,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/tropicana_orange_no_pulp.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 5
+          quantity: 5,
         },
         {
           id: 449,
@@ -350,10 +350,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/kitchen_accessories_camp_cutlery.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
-      status: "processing"
+      status: "processing",
     },
 
     {
@@ -378,7 +378,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/absolute_plus_Meat_Dental_Set_.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 5
+          quantity: 5,
         },
         {
           id: 449,
@@ -387,10 +387,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/kitchen_accessories_camp_cutlery.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
-      status: "processing"
+      status: "processing",
     },
     {
       id: 12,
@@ -414,7 +414,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/Coca_Cola_200ml_Bottle.jpg",
           weight: "2lb",
           price: 10,
-          quantity: 50
+          quantity: 50,
         },
         {
           id: 253,
@@ -423,10 +423,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/kitchen_accessories_dinner_spoons.jpg",
           weight: "2lb",
           price: 300,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
-      status: "pending"
+      status: "pending",
     },
     {
       id: 13,
@@ -450,7 +450,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/laundry_products_home_made_simple.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 5
+          quantity: 5,
         },
         {
           id: 402,
@@ -459,10 +459,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/canadian_maple_syrup.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 2
-        }
+          quantity: 2,
+        },
       ],
-      status: "delivered"
+      status: "delivered",
     },
     {
       id: 14,
@@ -486,7 +486,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/tropicana_orange_no_pulp.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 5
+          quantity: 5,
         },
         {
           id: 449,
@@ -495,10 +495,10 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/kitchen_accessories_camp_cutlery.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
-      status: "pending"
+      status: "pending",
     },
     {
       id: 15,
@@ -522,7 +522,7 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/servivita_chocolate_syrup.jpg",
           weight: "2lb",
           price: 50,
-          quantity: 5
+          quantity: 5,
         },
         {
           id: 453,
@@ -531,11 +531,11 @@ const loadOrders = (): Order[] => {
             "http://s3.amazonaws.com/redqteam.com/pickbazar/gum_Oral_care_cleaning_kit.jpg",
           weight: "2lb",
           price: 430,
-          quantity: 1
-        }
+          quantity: 1,
+        },
       ],
-      status: "pending"
-    }
+      status: "pending",
+    },
   ]);
 };
 

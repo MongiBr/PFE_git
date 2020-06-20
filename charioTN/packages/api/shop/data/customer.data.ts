@@ -15,26 +15,26 @@ const loadCustomers = (): Customer[] => {
           id: "12312",
           type: "primary",
           name: "Home",
-          info: "27 Street, 2569 Heritage Road Visalia, CA 93291"
+          info: "27 Street, 2569 Heritage Road Visalia, CA 93291",
         },
         {
           id: "23423",
           type: "secondary",
           name: "Office",
-          info: "33 Baker Street, Crescent Road, CA 65746"
-        }
+          info: "33 Baker Street, Crescent Road, CA 65746",
+        },
       ],
       contacts: [
         {
           id: "88234",
           type: "primary",
-          number: "715-371-3507"
+          number: "715-371-3507",
         },
         {
           id: "23439",
           type: "secondary",
-          number: "715-371-3507"
-        }
+          number: "715-371-3507",
+        },
       ],
       card: [
         {
@@ -42,31 +42,31 @@ const loadCustomers = (): Customer[] => {
           type: "primary",
           cardType: "paypal",
           name: "james l. frank",
-          lastFourDigit: 2349
+          lastFourDigit: 2349,
         },
         {
           id: "987234",
           type: "secondary",
           cardType: "master",
           name: "james l. frank",
-          lastFourDigit: 8724
+          lastFourDigit: 8724,
         },
         {
           id: "424987",
           type: "secondary",
           cardType: "visa",
           name: "james l. frank",
-          lastFourDigit: 4535
+          lastFourDigit: 4535,
         },
         {
           id: "455599",
           type: "secondary",
           cardType: "visa",
           name: "james l. frank",
-          lastFourDigit: 4585
-        }
+          lastFourDigit: 4585,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
     {
       id: "2",
@@ -81,48 +81,48 @@ const loadCustomers = (): Customer[] => {
           id: "265789",
           type: "primary",
           name: "Home",
-          info: "43 Street, 2341 Road Visalia, Ny 24252"
+          info: "43 Street, 2341 Road Visalia, Ny 24252",
         },
         {
           id: "325164",
           type: "secondary",
           name: "Office",
-          info: "29 Eve Street, 543 Evenue Road, Ny 87876"
-        }
+          info: "29 Eve Street, 543 Evenue Road, Ny 87876",
+        },
       ],
       contacts: [
         {
           id: "12354",
           type: "primary",
-          number: "937-667-7660"
+          number: "937-667-7660",
         },
         {
           id: "32156",
           type: "secondary",
-          number: "937-667-7660"
-        }
+          number: "937-667-7660",
+        },
       ],
       card: [
         {
           id: "053151",
           cardType: "paypal",
           name: "andre m. pollock",
-          lastFourDigit: 8765
+          lastFourDigit: 8765,
         },
         {
           id: "659000",
           cardType: "master",
           name: "andre m. pollock",
-          lastFourDigit: 3201
+          lastFourDigit: 3201,
         },
         {
           id: "9856+320",
           cardType: "visa",
           name: "andre m. pollock",
-          lastFourDigit: 3245
-        }
+          lastFourDigit: 3245,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
 
     {
@@ -137,48 +137,48 @@ const loadCustomers = (): Customer[] => {
           id: "456984",
           type: "primary",
           name: "Home",
-          info: "2852 Duck Creek Road Palo Alto, CA 94306"
+          info: "2852 Duck Creek Road Palo Alto, CA 94306",
         },
         {
           id: "657841",
           type: "secondary",
           name: "Office",
-          info: "4107 Medical Center Drive Tampa, FL 33602"
-        }
+          info: "4107 Medical Center Drive Tampa, FL 33602",
+        },
       ],
       contacts: [
         {
           id: "320654",
           type: "primary",
-          number: "320-692-5287"
+          number: "320-692-5287",
         },
         {
           id: "12462",
           type: "secondary",
-          number: "320-692-5287"
-        }
+          number: "320-692-5287",
+        },
       ],
       card: [
         {
           id: "78302",
           cardType: "paypal",
           name: "Debra J. Nguyen",
-          lastFourDigit: 6325
+          lastFourDigit: 6325,
         },
         {
           id: "852300",
           cardType: "master",
           name: "Debra J. Nguyen",
-          lastFourDigit: 5599
+          lastFourDigit: 5599,
         },
         {
           id: "778899",
           cardType: "visa",
           name: "Debra J. Nguyen",
-          lastFourDigit: 3210
-        }
+          lastFourDigit: 3210,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
 
     {
@@ -193,48 +193,48 @@ const loadCustomers = (): Customer[] => {
           id: "987654",
           type: "primary",
           name: "Home",
-          info: "24092 Ocello Street San Diego, CA 92111"
+          info: "24092 Ocello Street San Diego, CA 92111",
         },
         {
           id: "014785",
           type: "secondary",
           name: "Office",
-          info: "24092 Ocello Street San Diego, CA 92111"
-        }
+          info: "24092 Ocello Street San Diego, CA 92111",
+        },
       ],
       contacts: [
         {
           id: "397105",
           type: "primary",
-          number: "989-981-9455"
+          number: "989-981-9455",
         },
         {
           id: "123985",
           type: "secondary",
-          number: "989-981-9455"
-        }
+          number: "989-981-9455",
+        },
       ],
       card: [
         {
           id: "64589521",
           cardType: "paypal",
           name: "Erin E. Gonzales",
-          lastFourDigit: 6667
+          lastFourDigit: 6667,
         },
         {
           id: "44223659",
           cardType: "master",
           name: "Erin E. Gonzales",
-          lastFourDigit: 4414
+          lastFourDigit: 4414,
         },
         {
           id: "00336652155",
           cardType: "visa",
           name: "Erin E. Gonzales",
-          lastFourDigit: 3245
-        }
+          lastFourDigit: 3245,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
     {
       id: "5",
@@ -248,48 +248,48 @@ const loadCustomers = (): Customer[] => {
           id: "8956321",
           type: "primary",
           name: "Home",
-          info: "2396 Gordon Street Los Angeles, CA 90017"
+          info: "2396 Gordon Street Los Angeles, CA 90017",
         },
         {
           id: "0265161",
           type: "secondary",
           name: "Office",
-          info: "2396 Gordon Street Los Angeles, CA 90017"
-        }
+          info: "2396 Gordon Street Los Angeles, CA 90017",
+        },
       ],
       contacts: [
         {
           id: "564984643",
           type: "primary",
-          number: "352-368-4009"
+          number: "352-368-4009",
         },
         {
           id: "65654651",
           type: "secondary",
-          number: "352-368-4009"
-        }
+          number: "352-368-4009",
+        },
       ],
       card: [
         {
           id: "6515165",
           cardType: "paypal",
           name: "Carolyn B. Coulter",
-          lastFourDigit: 9874
+          lastFourDigit: 9874,
         },
         {
           id: "320125",
           cardType: "master",
           name: "Carolyn B. Coulter",
-          lastFourDigit: 9875
+          lastFourDigit: 9875,
         },
         {
           id: "00123655",
           cardType: "visa",
           name: "Carolyn B. Coulter",
-          lastFourDigit: 5621
-        }
+          lastFourDigit: 5621,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
 
     {
@@ -305,48 +305,48 @@ const loadCustomers = (): Customer[] => {
           id: "654654654",
           type: "primary",
           name: "Home",
-          info: "2971 Waldeck Street Arlington, TX 75760"
+          info: "2971 Waldeck Street Arlington, TX 75760",
         },
         {
           id: "014785",
           type: "secondary",
           name: "Office",
-          info: "2971 Waldeck Street Arlington, TX 75760"
-        }
+          info: "2971 Waldeck Street Arlington, TX 75760",
+        },
       ],
       contacts: [
         {
           id: "988965",
           type: "primary",
-          number: "215-645-0615"
+          number: "215-645-0615",
         },
         {
           id: "12462",
           type: "secondary",
-          number: "215-645-0615"
-        }
+          number: "215-645-0615",
+        },
       ],
       card: [
         {
           id: "320120",
           cardType: "paypal",
           name: "Bryan G. Hathaway",
-          lastFourDigit: 5555
+          lastFourDigit: 5555,
         },
         {
           id: "852369",
           cardType: "master",
           name: "Bryan G. Hathaway",
-          lastFourDigit: 4412
+          lastFourDigit: 4412,
         },
         {
           id: "00123355",
           cardType: "visa",
           name: "Bryan G. Hathaway",
-          lastFourDigit: 3245
-        }
+          lastFourDigit: 3245,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
     {
       id: "7",
@@ -360,48 +360,48 @@ const loadCustomers = (): Customer[] => {
           id: "5232031",
           type: "primary",
           name: "Home",
-          info: "3090 Marshall Street Baltimore, MD 21202"
+          info: "3090 Marshall Street Baltimore, MD 21202",
         },
         {
           id: "01245456",
           type: "secondary",
           name: "Office",
-          info: "3090 Marshall Street Baltimore, MD 21202"
-        }
+          info: "3090 Marshall Street Baltimore, MD 21202",
+        },
       ],
       contacts: [
         {
           id: "320156",
           type: "primary",
-          number: "727-438-6098"
+          number: "727-438-6098",
         },
         {
           id: "12462",
           type: "secondary",
-          number: "727-438-6098"
-        }
+          number: "727-438-6098",
+        },
       ],
       card: [
         {
           id: "164654684",
           cardType: "paypal",
           name: "Tony L. Dematteo",
-          lastFourDigit: 5855
+          lastFourDigit: 5855,
         },
         {
           id: "354687",
           cardType: "master",
           name: "Tony L. Dematteo",
-          lastFourDigit: 4413
+          lastFourDigit: 4413,
         },
         {
           id: "563124860",
           cardType: "visa",
           name: "Tony L. Dematteo",
-          lastFourDigit: 3452
-        }
+          lastFourDigit: 3452,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
     {
       id: "8",
@@ -415,48 +415,48 @@ const loadCustomers = (): Customer[] => {
           id: "89654710",
           type: "primary",
           name: "Home",
-          info: "4270 Kennedy Court Mansfield, MA 02048"
+          info: "4270 Kennedy Court Mansfield, MA 02048",
         },
         {
           id: "6543287",
           type: "secondary",
           name: "Office",
-          info: "4270 Kennedy Court Mansfield, MA 02048"
-        }
+          info: "4270 Kennedy Court Mansfield, MA 02048",
+        },
       ],
       contacts: [
         {
           id: "563201",
           type: "primary",
-          number: "208-610-3130"
+          number: "208-610-3130",
         },
         {
           id: "0563795",
           type: "secondary",
-          number: "208-610-3130"
-        }
+          number: "208-610-3130",
+        },
       ],
       card: [
         {
           id: "8741032",
           cardType: "paypal",
           name: "Leah M. Cassella",
-          lastFourDigit: 5885
+          lastFourDigit: 5885,
         },
         {
           id: "8632145",
           cardType: "master",
           name: "Leah M. Cassella",
-          lastFourDigit: 4113
+          lastFourDigit: 4113,
         },
         {
           id: "7403694",
           cardType: "visa",
           name: "Leah M. Cassella",
-          lastFourDigit: 3455
-        }
+          lastFourDigit: 3455,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
 
     {
@@ -472,48 +472,48 @@ const loadCustomers = (): Customer[] => {
           id: "6320125485",
           type: "primary",
           name: "Home",
-          info: "4270 Kennedy Court Mansfield, MA 02048"
+          info: "4270 Kennedy Court Mansfield, MA 02048",
         },
         {
           id: "8541230",
           type: "secondary",
           name: "Office",
-          info: "4270 Kennedy Court Mansfield, MA 02048"
-        }
+          info: "4270 Kennedy Court Mansfield, MA 02048",
+        },
       ],
       contacts: [
         {
           id: "563201",
           type: "primary",
-          number: "912-345-6071"
+          number: "912-345-6071",
         },
         {
           id: "0552095",
           type: "secondary",
-          number: "912-345-6071"
-        }
+          number: "912-345-6071",
+        },
       ],
       card: [
         {
           id: "87418962",
           cardType: "paypal",
           name: "James C. Chambers",
-          lastFourDigit: 5985
+          lastFourDigit: 5985,
         },
         {
           id: "86369745",
           cardType: "master",
           name: "James C. Chambers",
-          lastFourDigit: 1113
+          lastFourDigit: 1113,
         },
         {
           id: "74865694",
           cardType: "visa",
           name: "James C. Chambers",
-          lastFourDigit: 3450
-        }
+          lastFourDigit: 3450,
+        },
       ],
-      creation_date: new Date()
+      creation_date: new Date(),
     },
     {
       id: "10",
@@ -527,49 +527,49 @@ const loadCustomers = (): Customer[] => {
           id: "63896425485",
           type: "primary",
           name: "Home",
-          info: "4960 Kennedy Court Mansfield, MA 02048"
+          info: "4960 Kennedy Court Mansfield, MA 02048",
         },
         {
           id: "8541230",
           type: "secondary",
           name: "Office",
-          info: "4890 Kennedy Court Mansfield, MA 02048"
-        }
+          info: "4890 Kennedy Court Mansfield, MA 02048",
+        },
       ],
       contacts: [
         {
           id: "5632001",
           type: "primary",
-          number: "901-268-7845"
+          number: "901-268-7845",
         },
         {
           id: "0552085",
           type: "secondary",
-          number: "901-268-7845"
-        }
+          number: "901-268-7845",
+        },
       ],
       card: [
         {
           id: "87878962",
           cardType: "paypal",
           name: "Mary R. Wills",
-          lastFourDigit: 6985
+          lastFourDigit: 6985,
         },
         {
           id: "86339745",
           cardType: "master",
           name: "Mary R. Wills",
-          lastFourDigit: 1111
+          lastFourDigit: 1111,
         },
         {
           id: "74865554",
           cardType: "visa",
           name: "Mary R. Wills",
-          lastFourDigit: 3450
-        }
+          lastFourDigit: 3450,
+        },
       ],
-      creation_date: new Date()
-    }
+      creation_date: new Date(),
+    },
   ]);
 };
 
