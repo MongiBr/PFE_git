@@ -1,0 +1,93 @@
+
+type SuccessMessage {
+    message: String
+}
+
+
+
+type Mutation {
+    createItem(title: String, description: String, price: Int, image: String, largeImage: String): Item!
+    updateItem(id: ID!, title: String, description: String, price: Int): Item!
+    deleteItem(id: ID!): Item
+    signup(email: String!, password: String!): AuthPayload
+    login(email: String!, password: String!): AuthPayload
+    #signup(email: String!, password: String!, name: String!): User!
+    #signin(email: String!, password: String!): User!
+    logout: SuccessMessage
+    requestReset(email: String!): SuccessMessage
+    resetPassword(resetToken: String, password: String!, confirmPassword: String!): User!
+    updateRole(role: String, userId: ID!): User
+    createOrder(token: String!): Order!
+}
+type AuthPayload {
+  token: String!
+  user: User!
+}
+type Query {
+    #items(where: ItemWhereInput, orderBy: ItemOrderByInput, skip: Int, first: Int): [Item]!
+    
+    #item(id:ID!): Item
+    #itemsConnection(id:ID!): ItemConnection!
+    me: User
+    users: [User]!
+    order(id: ID!): Order
+    user(id:ID!):User
+    #orders(orderBy: OrderOrderByInput): [Order]!
+    
+}
+
+
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    password: String!
+    resetToken: String
+    resetToenExpiry: String
+    role: String
+    items: [Item]
+    orders: [Order]
+    shop: Shop
+}
+type Category {
+    id: ID! 
+    title: String! 
+}
+
+type Shop{
+    id:ID! 
+    name: String!
+    adress: String!
+}
+
+type Item {
+    id: ID! 
+    title: String!
+    description: String!
+    image: String
+    largeImage: String
+    price: Int!
+    category: Category!
+}
+
+type OrderItem {
+    title: String!
+    description: String!
+    image: String
+    largeImage: String
+    price: Int!
+    user: User!
+    category: Category!
+}
+
+type Order {
+    id: ID! 
+    items: [OrderItem!]!
+    total: Int!
+    user: User!
+    charge: String
+    createdAt: String!
+    updatedAt: String!
+}
+
