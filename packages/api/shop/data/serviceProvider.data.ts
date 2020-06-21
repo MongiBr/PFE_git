@@ -8,7 +8,17 @@ const loadCustomers = (): ServiceProvider[] => {
       name: "James L. Frank",
       image: "https://randomuser.me/api/portraits/men/80.jpg",
       email: "jameslfrank@jourrapide.com",
-      products: [],
+      products: [
+        {
+          id: "1",
+        },
+        {
+          id: "5",
+        },
+        {
+          id: "8",
+        },
+      ],
       type: "food",
       address: [
         {

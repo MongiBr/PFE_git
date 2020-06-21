@@ -5,7 +5,7 @@ import { Modal } from "@redq/reuse-modal";
 import { withApollo } from "helper/apollo";
 import StoreNav from "components/StoreNav/StoreNav";
 import Sidebar from "containers/Sidebar/Sidebar";
-import ServiceProviders from "containers/ServiceProviders/ServiceProviders";
+import ServiceProvidersList from "containers/ServiceProvidersList/ServiceProvidersList";
 import CartPopUp from "containers/Cart/CartPopUp";
 import {
   MainContentArea,
@@ -47,11 +47,11 @@ function MakeupPage({ deviceType }) {
               </SidebarSection>
               <ContentSection>
                 <div ref={targetRef}>
-                  <ServiceProviders
+                  <ServiceProvidersList
                     type={PAGE_TYPE}
                     deviceType={deviceType}
                     fetchLimit={8}
-                  ></ServiceProviders>
+                  ></ServiceProvidersList>
                 </div>
               </ContentSection>
             </MainContentArea>
@@ -62,11 +62,11 @@ function MakeupPage({ deviceType }) {
             <Sidebar type={PAGE_TYPE} deviceType={deviceType} />
             <ContentSection style={{ width: "100%" }}>
               <div ref={targetRef}>
-                <ServiceProviders
+                <ServiceProvidersList
                   type={PAGE_TYPE}
                   deviceType={deviceType}
                   fetchLimit={8}
-                ></ServiceProviders>
+                ></ServiceProvidersList>
               </div>
             </ContentSection>
           </MainContentArea>

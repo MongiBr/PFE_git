@@ -47005,7 +47005,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var MobileHeader = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return Promise.all(/*! import() */[__webpack_require__.e(3), __webpack_require__.e(0)]).then(__webpack_require__.bind(null, /*! ./Header/MobileHeader */ "./containers/LayoutContainer/Header/MobileHeader.tsx"));
+  return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(0)]).then(__webpack_require__.bind(null, /*! ./Header/MobileHeader */ "./containers/LayoutContainer/Header/MobileHeader.tsx"));
 }, {
   ssr: false,
   loadableGenerated: {
@@ -50399,5 +50399,5 @@ module.exports = dll_2792696c4305f10043ec;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js",3]]]);
+},[[0,"static/runtime/webpack.js",2]]]);
 //# sourceMappingURL=_app.js.map

@@ -28,7 +28,7 @@ import OrderRecivedWrapper, {
   ListDes,
   Blocklist,
   ListPro,
-} from "../../containers/ServiceProvider/ServiceProvider.style";
+} from "../ServiceProviderDetails/ServiceProviderDetails.style";
 import { marginRight } from "styled-system";
 
 const FooterPage = () => {

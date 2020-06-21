@@ -1,276 +1,4 @@
 {
-  "../QuickView/QuickView": [
-    {
-      "id": "../../node_modules/bootstrap/dist/css/bootstrap.min.css",
-      "name": "../../node_modules/bootstrap/dist/css/bootstrap.min.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 1,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-      "name": "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 2,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/bootstrap-css-only/css/bootstrap.min.css",
-      "name": "../../node_modules/bootstrap-css-only/css/bootstrap.min.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 3,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/mdbreact/dist/css/mdb.css",
-      "name": "../../node_modules/mdbreact/dist/css/mdb.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 4,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 5,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/rc-table/assets/index.css",
-      "name": "../../node_modules/rc-table/assets/index.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 6,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/rc-collapse/assets/index.css",
-      "name": "../../node_modules/rc-collapse/assets/index.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 7,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/styles.css",
-      "name": "../../node_modules/react-multi-carousel/lib/styles.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 8,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/@redq/reuse-modal/lib/index.css",
-      "name": "../../node_modules/@redq/reuse-modal/lib/index.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 9,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "./containers/Footer/footer.css",
-      "name": "./containers/Footer/footer.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 13,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/rc-drawer/assets/index.css",
-      "name": "../../node_modules/rc-drawer/assets/index.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 10,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "./components/MultiCarousel/MultiCarousel.style.css",
-      "name": "./components/MultiCarousel/MultiCarousel.style.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 15,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/index.js",
-      "name": "../../node_modules/react-multi-carousel/index.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/Arrows.js",
-      "name": "../../node_modules/react-multi-carousel/lib/Arrows.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/Carousel.js",
-      "name": "../../node_modules/react-multi-carousel/lib/Carousel.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/CarouselItems.js",
-      "name": "../../node_modules/react-multi-carousel/lib/CarouselItems.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/Dots.js",
-      "name": "../../node_modules/react-multi-carousel/lib/Dots.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/index.js",
-      "name": "../../node_modules/react-multi-carousel/lib/index.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/types.js",
-      "name": "../../node_modules/react-multi-carousel/lib/types.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/clones.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/clones.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/common.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/common.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/dots.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/dots.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/elementWidth.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/elementWidth.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/index.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/index.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/mouseOrTouchMove.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/mouseOrTouchMove.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/next.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/next.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/previous.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/previous.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/throttle.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/throttle.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/utils/throwError.js",
-      "name": "../../node_modules/react-multi-carousel/lib/utils/throwError.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "./components/MultiCarousel/MultiCarousel.tsx",
-      "name": "./components/MultiCarousel/MultiCarousel.tsx",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "./components/Truncate/Truncate.tsx",
-      "name": "./components/Truncate/Truncate.tsx",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "./containers/QuickView/QuickView.style.tsx",
-      "name": "./containers/QuickView/QuickView.style.tsx",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "./containers/QuickView/QuickView.tsx",
-      "name": "./containers/QuickView/QuickView.tsx",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    },
-    {
-      "id": "./contexts/language/language.context.js",
-      "name": "./contexts/language/language.context.js",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    }
-  ],
   "./Header/MobileHeader": [
     {
       "id": "../../node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -381,7 +109,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 13,
+      "id": 14,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -394,18 +122,6 @@
     },
     {
       "id": 10,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "./components/MultiCarousel/MultiCarousel.style.css",
-      "name": "./components/MultiCarousel/MultiCarousel.style.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 15,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -663,20 +379,20 @@
     {
       "id": "../../node_modules/@apollo/react-ssr/lib/react-ssr.esm.js",
       "name": "../../node_modules/@apollo/react-ssr/lib/react-ssr.esm.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
     },
     {
       "id": "../../node_modules/react-dom/cjs/react-dom-server.browser.development.js",
       "name": "../../node_modules/react-dom/cjs/react-dom-server.browser.development.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
     },
     {
       "id": "../../node_modules/react-dom/server.browser.js",
       "name": "../../node_modules/react-dom/server.browser.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
     }
   ]
 }
