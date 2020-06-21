@@ -1,10 +1,10 @@
 import InputSearch from "./Input";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import SearchResults from "./SearchResults";
 import SearchWrapper, { SearchBoxWrapper } from "./SearchBox.style";
 import { SearchIcon } from "../AllSvgIcon";
 import Popover from "components/Popover/Popover";
-
+import { SearchContext } from "contexts/search/search.context";
 import styled from "styled-components";
 import { FruitsVegetable, MenuDown, FacialCare } from "components/AllSvgIcon";
 import HeaderWrapper, {
@@ -130,31 +130,32 @@ const Search: React.FC<SearchBoxProps> = ({
     icon: <FruitsVegetable />,
     label: "Grocery",
   });
-
-  const [activeLocation, setActiveLocation] = useState({
-    state: "Choose city",
-    cities: [],
-  });
+  const {
+    state: { search },
+    updateSearch,
+  } = useContext<any>(SearchContext);
+  console.log(search);
   const [activeCity, setActiveCity] = useState("");
 
   const StateItem = (item: any) => {
     return (
-      <span
+      <div
+        className="menu-item"
         key={item.state}
         onClick={() => {
-          setActiveLocation(item);
+          updateSearch(item);
           setActiveCity(item.cities[0]);
         }}
       >
         {item.state}
-      </span>
+      </div>
     );
   };
   const CityItem = (item: any) => {
     return (
-      <span key={item} onClick={() => setActiveCity(item)}>
+      <div className="menu-item" key={item} onClick={() => setActiveCity(item)}>
         {item}
-      </span>
+      </div>
     );
   };
   const NavItem = (item: any) => {
@@ -176,9 +177,9 @@ const Search: React.FC<SearchBoxProps> = ({
           className="right"
           handler={
             <SelectedType>
-              <span>
-                <span>{activeLocation.state}</span>
-              </span>
+              <div className="menu-item">
+                <span>{search.state}</span>
+              </div>
               <DropDownArrow>
                 <MenuDown />
               </DropDownArrow>
@@ -198,7 +199,7 @@ const Search: React.FC<SearchBoxProps> = ({
               </DropDownArrow>
             </SelectedType>
           }
-          content={<>{activeLocation.cities.map(CityItem)}</>}
+          content={<>{search.cities.map(CityItem)}</>}
         />
 
         <Popover

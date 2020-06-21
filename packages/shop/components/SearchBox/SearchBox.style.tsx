@@ -190,7 +190,7 @@ export const SearchBoxWrapper = styled.div`
   border-radius: 6px 6px 6px 6px;
   display: flex;
   align-items: center;
-
+  justify-content: space-around;
   &.hideType {
     ${CurrentType} {
       display: none;

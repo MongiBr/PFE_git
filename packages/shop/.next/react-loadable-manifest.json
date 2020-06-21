@@ -103,13 +103,13 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": "./containers/Footer/footer.css",
-      "name": "./containers/Footer/footer.css",
+      "id": "./components/RestaurantCard/Restaurant.css",
+      "name": "./components/RestaurantCard/Restaurant.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 14,
+      "id": 13,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"

@@ -23,31 +23,19 @@ import OrderRecivedWrapper, {
   ListDes,
   Blocklist,
   ListPro,
-} from "../../containers/ServiceProvider/ServiceProvider.style";
+} from "../../containers/ServiceProviderDetails/ServiceProviderDetails.style";
 import { FormattedMessage } from "react-intl";
 import { Description } from "containers/ProductDetailsBook/ProductDetailsBook.style";
 
 type RestaurantCardProps = {
-  title: string;
-  city: string;
-  location: string;
-  type: string;
-  hours: string;
-  costPrice: Number;
-  image: any;
+  data: any;
 
   onClick?: (e: any) => void;
   onChange?: (e: any) => void;
 };
 
 const RestaurantCard: React.FC<RestaurantCardProps> = ({
-  title,
-  image,
-  city,
-  location,
-  type,
-  hours,
-  costPrice,
+  data,
   onChange,
 
   onClick,
@@ -58,15 +46,15 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
       <Card style={{ width: "100%" }}>
         <Card.Body>
           <Media>
-            <img width={127} height={127} className="mr-3" src={image} />
+            <img width={127} height={127} className="mr-3" src={data.image} />
             <Media.Body>
-              <BlockTitle>{title} </BlockTitle>
+              <BlockTitle>{data.name} </BlockTitle>
 
               <Text bold>
-                <FormattedMessage id="order" defaultMessage={city} />
+                <FormattedMessage id="order" defaultMessage={data.city} />
               </Text>
 
-              <Text>{location}</Text>
+              <Text>{data.location}</Text>
               <div>
                 <MDBRating></MDBRating>
               </div>
@@ -81,7 +69,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
               </Text>
             </ListTitle>
             <ListDes>
-              <Text>{type}</Text>
+              <Text>{data.type}</Text>
             </ListDes>
           </ListItem>
 
@@ -92,7 +80,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
               </Text>
             </ListTitle>
             <ListDes>
-              <Text>{costPrice}</Text>
+              <Text>{data.costPrice}</Text>
             </ListDes>
           </ListItem>
 
@@ -103,13 +91,15 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
               </Text>
             </ListTitle>
             <ListDes>
-              <Text>{hours}</Text>
+              <Text>{data.hours}</Text>
             </ListDes>
           </ListItem>
         </Card.Body>
-        <Link href="serviceprovider">
-          <Button title="View Page " style={{ width: "100%" }}></Button>
-        </Link>
+        <Button
+          title="View Page "
+          style={{ width: "100%" }}
+          onClick={() => onClick(data.id)}
+        ></Button>
       </Card>
     </div>
   );

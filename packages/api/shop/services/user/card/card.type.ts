@@ -1,15 +1,15 @@
-import { ObjectType, ID, Field } from 'type-graphql';
+import { ObjectType, ID, Field } from "type-graphql";
 
 @ObjectType()
 export default class Card {
-  @Field(type => ID)
+  @Field((type) => ID)
   id: string;
 
   @Field()
   type: string;
 
   @Field()
-  title: string;
+  name: string;
 
   @Field()
   cardType: string;

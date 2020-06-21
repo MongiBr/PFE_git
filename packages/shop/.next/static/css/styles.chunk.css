@@ -389,21 +389,39 @@
   z-index: 9999999;
 }
 
-#footer {
-  background-color: #fbfbfb;
-}
-#ftr {
-  background-color: #f4f4f4;
-}
-a:link {
-  color: #757575;
-}
-a:active {
-  color: #fed700;
-}
-a:visited {
-  color: #fed700;
+.rating a {
+  color: rgb(206, 205, 205);
   text-decoration: none;
+  font-size: 2em;
+  transition: color 0.4s;
+}
+.rating a:hover,
+.rating a:focus {
+  color: orange;
+  cursor: pointer;
+}
+
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+  color: #fed700;
+}
+
+.rating a {
+  float: right;
+}
+.rating a {
+  float: right;
+  color: rgb(194, 193, 193);
+  text-decoration: none;
+  font-size: 2em;
+  transition: color 0.4s;
+}
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+  color: #fed700;
+  cursor: pointer;
 }
 
 .drawer {

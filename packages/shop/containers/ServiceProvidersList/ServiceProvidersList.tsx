@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import ProductCard from "components/ProductCard/ProductCard";
+import RestaurantCard from "components/RestaurantCard/RestaurantCard";
 import {
   ProductsRow,
   ProductsCol,
@@ -43,8 +43,8 @@ export const ServiceProviders: React.FC<ServiceProvidersProps> = ({
     },
   });
 
-  const handleOnClick = React.useCallback((item: any, deviceType: any) => {
-    const as = `/serviceProvider/${item.id}`;
+  const handleOnClick = React.useCallback((id: string) => {
+    const as = `/serviceProvider/${id}`;
     router.push(as);
   }, []);
 
@@ -109,18 +109,9 @@ export const ServiceProviders: React.FC<ServiceProvidersProps> = ({
                 delay={index * 10}
                 style={{ height: "100%" }}
               >
-                <ProductCard
-                  title={item.name}
-                  description={item.email}
-                  image={item.image}
-                  weight={item.unit}
-                  currency={CURRENCY}
-                  price={item.price}
-                  salePrice={item.salePrice}
-                  discountInPercent={item.discountInPercent}
+                <RestaurantCard
                   data={item}
-                  deviceType={deviceType}
-                  onClick={() => handleOnClick(item, deviceType)}
+                  onClick={(id) => handleOnClick(id)}
                 />
               </Fade>
             </ProductCardWrapper>

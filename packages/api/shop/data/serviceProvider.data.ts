@@ -10,13 +10,13 @@ const loadCustomers = (): ServiceProvider[] => {
       email: "jameslfrank@jourrapide.com",
       products: [
         {
-          id: "1",
+          slug: "1",
         },
         {
-          id: "5",
+          slug: "5",
         },
         {
-          id: "8",
+          slug: "8",
         },
       ],
       type: "food",

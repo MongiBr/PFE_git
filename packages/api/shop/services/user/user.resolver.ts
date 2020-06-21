@@ -2,7 +2,7 @@ import { Resolver, Query, Arg, Int, Mutation } from "type-graphql";
 
 import { filterItems } from "../../helpers/filter";
 import User from "./user.type";
-import loadUsers from "./user.sample";
+import loadUsers from "../../data/customer.data";
 
 @Resolver()
 export class UserResolver {

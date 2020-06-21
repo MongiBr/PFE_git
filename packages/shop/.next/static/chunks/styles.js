@@ -333,10 +333,10 @@
 
 /***/ }),
 
-/***/ "./containers/Footer/footer.css":
-/*!**************************************!*\
-  !*** ./containers/Footer/footer.css ***!
-  \**************************************/
+/***/ "./components/RestaurantCard/Restaurant.css":
+/*!**************************************************!*\
+  !*** ./components/RestaurantCard/Restaurant.css ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -362,7 +362,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1592751428639");
+            injectCss(link, link.href.split("?")[0] + "?unix=1592752451501");
           });
       }
     }

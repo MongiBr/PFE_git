@@ -1,21 +1,21 @@
-import React, { useContext, useState, useEffect } from 'react';
-import Router from 'next/router';
-import gql from 'graphql-tag';
-import Button from 'components/Button/Button';
-import RadioCard from 'components/RadioCard/RadioCard';
-import RadioGroup from 'components/RadioGroup/RadioGroup';
-import PaymentGroup from 'components/PaymentGroup/PaymentGroup';
-import Loader from 'components/Loader/Loader';
-import UpdateAddress from './Update/UpdateAddress';
-import UpdateContact from './Update/UpdateContact';
-import StripePaymentForm from '../Payment/StripePaymentForm';
-import { DELETE_ADDRESS } from 'graphql/mutation/address';
-import { DELETE_CARD } from 'graphql/mutation/card';
-import { DELETE_CONTACT } from 'graphql/mutation/contact';
-import { openModal } from '@redq/reuse-modal';
-import { Product } from 'interfaces';
-import { useMutation } from '@apollo/react-hooks';
-import { CartContext } from 'contexts/cart/cart.context';
+import React, { useContext, useState, useEffect } from "react";
+import Router from "next/router";
+import gql from "graphql-tag";
+import Button from "components/Button/Button";
+import RadioCard from "components/RadioCard/RadioCard";
+import RadioGroup from "components/RadioGroup/RadioGroup";
+import PaymentGroup from "components/PaymentGroup/PaymentGroup";
+import Loader from "components/Loader/Loader";
+import UpdateAddress from "./Update/UpdateAddress";
+import UpdateContact from "./Update/UpdateContact";
+import StripePaymentForm from "../Payment/StripePaymentForm";
+import { DELETE_ADDRESS } from "graphql/mutation/address";
+import { DELETE_CARD } from "graphql/mutation/card";
+import { DELETE_CONTACT } from "graphql/mutation/contact";
+import { openModal } from "@redq/reuse-modal";
+import { Product } from "interfaces";
+import { useMutation } from "@apollo/react-hooks";
+import { CartContext } from "contexts/cart/cart.context";
 import CheckcoutWrapper, {
   CheckoutContainer,
   OrderSummary,
@@ -31,18 +31,18 @@ import CheckcoutWrapper, {
   CheckoutSubmit,
   CouponBoxWrapper,
   ErrorMsg,
-} from './Checkout.style';
+} from "./Checkout.style";
 import {
   getCartProducts,
   getSubTotalPrice,
   getTotalPrice,
   getDiscount,
   getCoupon,
-} from '../../helper/utility';
+} from "../../helper/utility";
 
-import CouponBox, { CouponDisplay } from 'components/CouponBox/CouponBox';
-import { ProfileContext } from 'contexts/profile/profile.context';
-import { FormattedMessage } from 'react-intl';
+import CouponBox, { CouponDisplay } from "components/CouponBox/CouponBox";
+import { ProfileContext } from "contexts/profile/profile.context";
+import { FormattedMessage } from "react-intl";
 
 // The type of props Checkout Form receives
 interface MyFormProps {
@@ -67,8 +67,8 @@ const APPLY_COUPON = gql`
 `;
 
 const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
-  const [couponCode, setCouponCode] = useState('');
-  const [couponError, setError] = useState('');
+  const [couponCode, setCouponCode] = useState("");
+  const [couponError, setError] = useState("");
   const [processedDiscount, setProcessedDiscount] = useState(getDiscount());
   const [processedCoupon, setProcessedCoupon] = useState(getCoupon());
   const { state, dispatch } = useContext(ProfileContext);
@@ -77,7 +77,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
   );
   const [loading, setLoading] = useState(false);
   const [isValid, setIsValid] = useState(false);
-  const { address, contact, card, schedules } = state;
+  const { addresses, contacts, card, schedules } = state;
   const items = getCartProducts();
   const subTotalPrice = getSubTotalPrice();
   const totalPrice = getTotalPrice();
@@ -91,7 +91,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
     setLoading(true);
     if (isValid) {
       clearCart();
-      Router.push('/order-received');
+      Router.push("/order-received");
     }
     setLoading(false);
   };
@@ -105,8 +105,8 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
     if (
       totalPrice > 0 &&
       items.length > 0 &&
-      address.length &&
-      contact.length &&
+      addresses.length &&
+      contacts.length &&
       card.length &&
       schedules.length
     ) {
@@ -118,13 +118,13 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
   const handleModal = (
     modalComponent: any,
     modalProps = {},
-    className: string = 'add-address-modal'
+    className: string = "add-address-modal"
   ) => {
     openModal({
       show: true,
       config: {
         width: 360,
-        height: 'auto',
+        height: "auto",
         enableResizing: false,
         disableDragging: true,
         className: className,
@@ -136,25 +136,25 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
   };
 
   const handleEditDelete = async (item: any, type: string, name: string) => {
-    if (type === 'edit') {
-      const modalComponent = name === 'address' ? UpdateAddress : UpdateContact;
+    if (type === "edit") {
+      const modalComponent = name === "address" ? UpdateAddress : UpdateContact;
       handleModal(modalComponent, item);
     } else {
       switch (name) {
-        case 'payment':
-          dispatch({ type: 'DELETE_CARD', payload: item.id });
+        case "payment":
+          dispatch({ type: "DELETE_CARD", payload: item.id });
 
           return await deletePaymentCardMutation({
             variables: { cardId: JSON.stringify(item.id) },
           });
-        case 'contact':
-          dispatch({ type: 'DELETE_CONTACT', payload: item.id });
+        case "contacts":
+          dispatch({ type: "DELETE_CONTACT", payload: item.id });
 
           return await deleteContactMutation({
             variables: { contactId: JSON.stringify(item.id) },
           });
-        case 'address':
-          dispatch({ type: 'DELETE_ADDRESS', payload: item.id });
+        case "addresses":
+          dispatch({ type: "DELETE_ADDRESS", payload: item.id });
 
           return await deleteAddressMutation({
             variables: { addressId: JSON.stringify(item.id) },
@@ -173,9 +173,9 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
     });
     if (applyCoupon && applyCoupon.discountInPercent) {
       addCoupon(applyCoupon);
-      setCouponCode('');
+      setCouponCode("");
     } else {
-      setError('Invalid Coupon');
+      setError("Invalid Coupon");
     }
   };
   const handleOnUpdate = (couponCode: any) => {
@@ -190,7 +190,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
             <OrderSummaryItem style={{ marginBottom: 15 }}>
               <OrderLabel>
                 <FormattedMessage id="subTotal" defaultMessage="Subtotal" /> (
-                {items.length}{' '}
+                {items.length}{" "}
                 <FormattedMessage id="itemsText" defaultMessage="items" />)
               </OrderLabel>
               <OrderAmount>
@@ -216,13 +216,13 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                 <FormattedMessage id="voucherText" defaultMessage="Voucher" />
               </OrderLabel>
               {processedDiscount &&
-              processedCoupon.code !== 'DEFAULT_COUPON' ? (
+              processedCoupon.code !== "DEFAULT_COUPON" ? (
                 <CouponDisplay
                   code={processedCoupon.code}
                   sign="-"
                   currency="$"
                   price={discount}
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     removeCoupon();
                   }}
@@ -278,11 +278,11 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                   title={item.title}
                   content={item.time_slot}
                   name="schedule"
-                  checked={item.type === 'primary'}
+                  checked={item.type === "primary"}
                   withActionButtons={false}
                   onChange={() =>
                     dispatch({
-                      type: 'SET_PRIMARY_SCHEDULE',
+                      type: "SET_PRIMARY_SCHEDULE",
                       payload: item.id.toString(),
                     })
                   }
@@ -300,7 +300,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
             </Heading>
             <ButtonGroup>
               <RadioGroup
-                items={address}
+                items={addresses}
                 component={(item: any) => (
                   <RadioCard
                     id={item.id}
@@ -308,15 +308,15 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                     title={item.name}
                     content={item.info}
                     name="address"
-                    checked={item.type === 'primary'}
+                    checked={item.type === "primary"}
                     onChange={() =>
                       dispatch({
-                        type: 'SET_PRIMARY_ADDRESS',
+                        type: "SET_PRIMARY_ADDRESS",
                         payload: item.id.toString(),
                       })
                     }
-                    onEdit={() => handleEditDelete(item, 'edit', 'address')}
-                    onDelete={() => handleEditDelete(item, 'delete', 'address')}
+                    onEdit={() => handleEditDelete(item, "edit", "address")}
+                    onDelete={() => handleEditDelete(item, "delete", "address")}
                   />
                 )}
                 secondaryComponent={
@@ -329,7 +329,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                     type="button"
                     intlButtonId="addAddressBtn"
                     onClick={() =>
-                      handleModal(UpdateAddress, 'add-address-modal')
+                      handleModal(UpdateAddress, "add-address-modal")
                     }
                   />
                 }
@@ -346,23 +346,23 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
             </Heading>
             <ButtonGroup>
               <RadioGroup
-                items={contact}
+                items={contacts}
                 component={(item: any) => (
                   <RadioCard
                     id={item.id}
                     key={item.id}
                     title={item.type}
                     content={item.number}
-                    checked={item.type === 'primary'}
+                    checked={item.type === "primary"}
                     onChange={() =>
                       dispatch({
-                        type: 'SET_PRIMARY_CONTACT',
+                        type: "SET_PRIMARY_CONTACT",
                         payload: item.id.toString(),
                       })
                     }
                     name="contact"
-                    onEdit={() => handleEditDelete(item, 'edit', 'contact')}
-                    onDelete={() => handleEditDelete(item, 'delete', 'contact')}
+                    onEdit={() => handleEditDelete(item, "edit", "contact")}
+                    onDelete={() => handleEditDelete(item, "delete", "contact")}
                   />
                 )}
                 secondaryComponent={
@@ -375,7 +375,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                     type="button"
                     intlButtonId="addContactBtn"
                     onClick={() =>
-                      handleModal(UpdateContact, 'add-contact-modal')
+                      handleModal(UpdateContact, "add-contact-modal")
                     }
                   />
                 }
@@ -395,11 +395,11 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
               deviceType={deviceType}
               items={card}
               onEditDeleteField={(item: any, type: string) =>
-                handleEditDelete(item, type, 'payment')
+                handleEditDelete(item, type, "payment")
               }
               onChange={(item: any) =>
                 dispatch({
-                  type: 'SET_PRIMARY_CARD',
+                  type: "SET_PRIMARY_CARD",
                   payload: item.id.toString(),
                 })
               }
@@ -407,7 +407,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                 handleModal(
                   StripePaymentForm,
                   { totalPrice },
-                  'add-address-modal stripe-modal'
+                  "add-address-modal stripe-modal"
                 );
               }}
             />

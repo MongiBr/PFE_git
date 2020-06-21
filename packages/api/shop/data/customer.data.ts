@@ -10,7 +10,7 @@ const loadCustomers = (): Customer[] => {
       email: "jameslfrank@jourrapide.com",
       total_order: 20,
       total_order_amount: 2563,
-      address: [
+      addresses: [
         {
           id: "12312",
           type: "primary",
@@ -76,7 +76,7 @@ const loadCustomers = (): Customer[] => {
       email: "andreMPollock@jourrapide.com",
       total_order: 30,
       total_order_amount: 6583,
-      address: [
+      addresses: [
         {
           id: "265789",
           type: "primary",
@@ -132,7 +132,7 @@ const loadCustomers = (): Customer[] => {
       email: "debraJNguyen@rhyta.com",
       total_order: 40,
       total_order_amount: 7832,
-      address: [
+      addresses: [
         {
           id: "456984",
           type: "primary",
@@ -188,7 +188,7 @@ const loadCustomers = (): Customer[] => {
       email: "erinEGonzales@teleworm.us",
       total_order: 5,
       total_order_amount: 3215,
-      address: [
+      addresses: [
         {
           id: "987654",
           type: "primary",
@@ -243,7 +243,7 @@ const loadCustomers = (): Customer[] => {
       email: "carolynBCoulter@dayrep.com",
       total_order: 20,
       total_order_amount: 7863,
-      address: [
+      addresses: [
         {
           id: "8956321",
           type: "primary",
@@ -300,7 +300,7 @@ const loadCustomers = (): Customer[] => {
       email: "bryanGHathaway@jourrapide.com",
       total_order: 2,
       total_order_amount: 1257,
-      address: [
+      addresses: [
         {
           id: "654654654",
           type: "primary",
@@ -355,7 +355,7 @@ const loadCustomers = (): Customer[] => {
       email: "tonyLDematteo@jourrapide.com",
       total_order: 25,
       total_order_amount: 5576,
-      address: [
+      addresses: [
         {
           id: "5232031",
           type: "primary",
@@ -410,7 +410,7 @@ const loadCustomers = (): Customer[] => {
       email: "leahMCassella@rhyta.com",
       total_order: 10,
       total_order_amount: 1102,
-      address: [
+      addresses: [
         {
           id: "89654710",
           type: "primary",
@@ -467,7 +467,7 @@ const loadCustomers = (): Customer[] => {
       email: "jamesCChambers@teleworm.us",
       total_order: 17,
       total_order_amount: 5698,
-      address: [
+      addresses: [
         {
           id: "6320125485",
           type: "primary",
@@ -522,7 +522,7 @@ const loadCustomers = (): Customer[] => {
       email: "maryRWills@armyspy.com",
       total_order: 8,
       total_order_amount: 2874,
-      address: [
+      addresses: [
         {
           id: "63896425485",
           type: "primary",

@@ -1,8 +1,8 @@
-import { ObjectType, ID, Field } from 'type-graphql';
+import { ObjectType, ID, Field } from "type-graphql";
 
 @ObjectType()
 export default class Contact {
-  @Field(type => ID)
+  @Field((type) => ID)
   id: string;
 
   @Field()

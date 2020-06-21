@@ -1,11 +1,11 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 export const UPDATE_ADDRESS = gql`
   mutation($addressInput: String!) {
     updateAddress(addressInput: $addressInput) {
       id
       name
-      address {
+      addresses {
         id
         name
         info
@@ -18,7 +18,7 @@ export const DELETE_ADDRESS = gql`
     deleteAddress(addressId: $addressId) {
       id
       name
-      address {
+      addresses {
         id
         name
         info

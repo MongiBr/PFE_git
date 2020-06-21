@@ -46459,7 +46459,7 @@ var SearchButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].but
 var SearchBoxWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "SearchBoxstyle__SearchBoxWrapper",
   componentId: "sc-1nej5as-8"
-})(["border:0;width:100%;opacity:1;transition:width ease-in-out 500ms,opacity ease-in-out 500ms;height:100%;flex-grow:1;font-size:", "px;color:", ";border:none;border-radius:6px 6px 6px 6px;display:flex;align-items:center;&.hideType{", "{display:none;}}&.collapsed{width:200px;background-color:#f7f7f7;border-radius:5px;flex-grow:0;transition:all ease-in-out 500ms;position:absolute;top:0;right:0;", "{border:1px solid transparent;border-radius:5px;}form,input{background-color:#f7f7f7;padding-left:0 !important;width:100%;&::-webkit-input-placeholder{font-size:", "px;color:", ";}&:-moz-placeholder{font-size:", "px;color:", ";}&::-moz-placeholder{font-size:", "px;color:", ";}&:-ms-input-placeholder{font-size:", "px;color:", ";}}}&.expanded{width:600px;position:absolute;top:0;right:0;transition:all ease-in-out 500ms;", "{border:1px solid ", ";border-radius:5px;}form,input{width:100%;padding-left:0 !important;&::-webkit-input-placeholder{font-size:", "px;color:", ";}&:-moz-placeholder{font-size:", "px;color:", ";}&::-moz-placeholder{font-size:", "px;color:", ";}&:-ms-input-placeholder{font-size:", "px;color:", ";}}}&.minimal{form,input{width:100%;padding-left:0 !important;}}"], Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.2", "15"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colors.darkRegular", "#77798C"), CurrentType, SearchInputWrapper, Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), SearchInputWrapper, Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colors.borderColor", "#E6E6E6"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"));
+})(["border:0;width:100%;opacity:1;transition:width ease-in-out 500ms,opacity ease-in-out 500ms;height:100%;flex-grow:1;font-size:", "px;color:", ";border:none;border-radius:6px 6px 6px 6px;display:flex;align-items:center;justify-content:space-around;&.hideType{", "{display:none;}}&.collapsed{width:200px;background-color:#f7f7f7;border-radius:5px;flex-grow:0;transition:all ease-in-out 500ms;position:absolute;top:0;right:0;", "{border:1px solid transparent;border-radius:5px;}form,input{background-color:#f7f7f7;padding-left:0 !important;width:100%;&::-webkit-input-placeholder{font-size:", "px;color:", ";}&:-moz-placeholder{font-size:", "px;color:", ";}&::-moz-placeholder{font-size:", "px;color:", ";}&:-ms-input-placeholder{font-size:", "px;color:", ";}}}&.expanded{width:600px;position:absolute;top:0;right:0;transition:all ease-in-out 500ms;", "{border:1px solid ", ";border-radius:5px;}form,input{width:100%;padding-left:0 !important;&::-webkit-input-placeholder{font-size:", "px;color:", ";}&:-moz-placeholder{font-size:", "px;color:", ";}&::-moz-placeholder{font-size:", "px;color:", ";}&:-ms-input-placeholder{font-size:", "px;color:", ";}}}&.minimal{form,input{width:100%;padding-left:0 !important;}}"], Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.2", "15"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colors.darkRegular", "#77798C"), CurrentType, SearchInputWrapper, Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), SearchInputWrapper, Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colors.borderColor", "#E6E6E6"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("fontSizes.3", "16"), Object(_styled_system_theme_get__WEBPACK_IMPORTED_MODULE_1__["themeGet"])("colorsdarkRegular", "#77798C"));
 /* harmony default export */ __webpack_exports__["default"] = (SearchWrapper);
 
 /***/ }),
@@ -46479,12 +46479,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SearchBox_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SearchBox.style */ "./components/SearchBox/SearchBox.style.tsx");
 /* harmony import */ var _AllSvgIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../AllSvgIcon */ "./components/AllSvgIcon.tsx");
 /* harmony import */ var components_Popover_Popover__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/Popover/Popover */ "./components/Popover/Popover.tsx");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "../../node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! containers/LayoutContainer/Header/Header.style */ "./containers/LayoutContainer/Header/Header.style.tsx");
+/* harmony import */ var contexts_search_search_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! contexts/search/search.context */ "./contexts/search/search.context.tsx");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "../../node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! containers/LayoutContainer/Header/Header.style */ "./containers/LayoutContainer/Header/Header.style.tsx");
 var _jsxFileName = "/Volumes/Second/npm/PFE_git/packages/shop/components/SearchBox/SearchBox.tsx",
     _this = undefined;
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -46521,7 +46523,7 @@ var LocationsArray = [{
   state: "Tunis",
   cities: ["Lac", "La fayette"]
 }];
-var Icon = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].span.withConfig({
+var Icon = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].span.withConfig({
   displayName: "SearchBox__Icon",
   componentId: "sc-1d3hxkm-0"
 })(["min-width:16px;margin-right:10px;display:flex;align-items:center;justify-content:center;"]);
@@ -46609,22 +46611,22 @@ var Search = function Search(_ref) {
       activeMenu = _useState4[0],
       setActiveMenu = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
-    state: "Choose city",
-    cities: []
-  }),
-      activeLocation = _useState5[0],
-      setActiveLocation = _useState5[1];
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(contexts_search_search_context__WEBPACK_IMPORTED_MODULE_5__["SearchContext"]),
+      search = _useContext.state.search,
+      updateSearch = _useContext.updateSearch;
 
-  var _useState6 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
-      activeCity = _useState6[0],
-      setActiveCity = _useState6[1];
+  console.log(search);
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      activeCity = _useState5[0],
+      setActiveCity = _useState5[1];
 
   var StateItem = function StateItem(item) {
-    return __jsx("span", {
+    return __jsx("div", {
+      className: "menu-item",
       key: item.state,
       onClick: function onClick() {
-        setActiveLocation(item);
+        updateSearch(item);
         setActiveCity(item.cities[0]);
       },
       __self: _this,
@@ -46637,7 +46639,8 @@ var Search = function Search(_ref) {
   };
 
   var CityItem = function CityItem(item) {
-    return __jsx("span", {
+    return __jsx("div", {
+      className: "menu-item",
       key: item,
       onClick: function onClick() {
         return setActiveCity(item);
@@ -46645,7 +46648,7 @@ var Search = function Search(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155,
+        lineNumber: 156,
         columnNumber: 7
       }
     }, item);
@@ -46660,7 +46663,7 @@ var Search = function Search(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162,
+        lineNumber: 163,
         columnNumber: 7
       }
     }, item.label);
@@ -46671,7 +46674,7 @@ var Search = function Search(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169,
+      lineNumber: 170,
       columnNumber: 5
     }
   }, __jsx(_SearchBox_style__WEBPACK_IMPORTED_MODULE_2__["SearchBoxWrapper"], {
@@ -46679,44 +46682,45 @@ var Search = function Search(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170,
+      lineNumber: 171,
       columnNumber: 7
     }
   }, __jsx(components_Popover_Popover__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "right",
-    handler: __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_6__["SelectedType"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 178,
-        columnNumber: 13
-      }
-    }, __jsx("span", {
+    handler: __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_7__["SelectedType"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 179,
+        columnNumber: 13
+      }
+    }, __jsx("div", {
+      className: "menu-item",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 180,
         columnNumber: 15
       }
     }, __jsx("span", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 180,
+        lineNumber: 181,
         columnNumber: 17
       }
-    }, activeLocation.state)), __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_6__["DropDownArrow"], {
+    }, search.state)), __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_7__["DropDownArrow"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182,
+        lineNumber: 183,
         columnNumber: 15
       }
     }, __jsx(_AllSvgIcon__WEBPACK_IMPORTED_MODULE_3__["MenuDown"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183,
+        lineNumber: 184,
         columnNumber: 17
       }
     }))),
@@ -46724,96 +46728,96 @@ var Search = function Search(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175,
+      lineNumber: 176,
       columnNumber: 9
     }
   }), __jsx(components_Popover_Popover__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "right",
-    handler: __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_6__["SelectedType"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 192,
-        columnNumber: 13
-      }
-    }, __jsx("span", {
+    handler: __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_7__["SelectedType"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 193,
-        columnNumber: 15
+        columnNumber: 13
       }
     }, __jsx("span", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 194,
-        columnNumber: 17
+        columnNumber: 15
       }
-    }, activeCity)), __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_6__["DropDownArrow"], {
+    }, __jsx("span", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 196,
+        lineNumber: 195,
+        columnNumber: 17
+      }
+    }, activeCity)), __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_7__["DropDownArrow"], {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 197,
         columnNumber: 15
       }
     }, __jsx(_AllSvgIcon__WEBPACK_IMPORTED_MODULE_3__["MenuDown"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197,
+        lineNumber: 198,
         columnNumber: 17
       }
     }))),
-    content: __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, activeLocation.cities.map(CityItem)),
+    content: __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, search.cities.map(CityItem)),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189,
+      lineNumber: 190,
       columnNumber: 9
     }
   }), __jsx(components_Popover_Popover__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "right",
-    handler: __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_6__["SelectedType"], {
+    handler: __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_7__["SelectedType"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 207,
+        lineNumber: 208,
         columnNumber: 13
       }
     }, __jsx("span", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 208,
+        lineNumber: 209,
         columnNumber: 15
       }
-    }, __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_6__["TypeIcon"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 209,
-        columnNumber: 17
-      }
-    }, activeMenu.icon), __jsx("span", {
+    }, __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_7__["TypeIcon"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 210,
         columnNumber: 17
       }
-    }, activeMenu.label)), __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_6__["DropDownArrow"], {
+    }, activeMenu.icon), __jsx("span", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212,
+        lineNumber: 211,
+        columnNumber: 17
+      }
+    }, activeMenu.label)), __jsx(containers_LayoutContainer_Header_Header_style__WEBPACK_IMPORTED_MODULE_7__["DropDownArrow"], {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 213,
         columnNumber: 15
       }
     }, __jsx(_AllSvgIcon__WEBPACK_IMPORTED_MODULE_3__["MenuDown"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 213,
+        lineNumber: 214,
         columnNumber: 17
       }
     }))),
@@ -46821,7 +46825,7 @@ var Search = function Search(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204,
+      lineNumber: 205,
       columnNumber: 9
     }
   })), autoSuggestion && toggleSuggestion ? __jsx(_SearchResults__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -46833,7 +46837,7 @@ var Search = function Search(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 236,
       columnNumber: 9
     }
   }) : null);
@@ -46847,7 +46851,7 @@ Search.defaultProps = {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 250,
       columnNumber: 15
     }
   }),
@@ -48694,7 +48698,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OFFER_PAGE", function() { return OFFER_PAGE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HELP_PAGE", function() { return HELP_PAGE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Service_Provider", function() { return Service_Provider; });
-var HOME_PAGE = "/";
+var HOME_PAGE = "/home";
 var GROCERY_PAGE = "/grocery";
 var Food_PAGE = "/foods";
 var CLOTHING = "/clothing";
@@ -49489,12 +49493,21 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'UPDATE':
+    case "UPDATE":
       return _objectSpread({}, state, {}, action.payload);
 
-    case 'RESET':
+    case "UPDATE_LOCATION":
+      {
+        return _objectSpread({}, state, {}, action.payload);
+      }
+
+    case "RESET":
       return {
-        page: 1
+        page: 1,
+        search: {
+          state: "",
+          cities: []
+        }
       };
 
     default:
@@ -49507,20 +49520,34 @@ var SearchProvider = function SearchProvider(_ref) {
       query = _ref.query;
 
   var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_1__["useReducer"])(reducer, _objectSpread({}, query, {
-    page: 1
+    page: 1,
+    search: {
+      state: "",
+      cities: []
+    }
   })),
       state = _useReducer[0],
       dispatch = _useReducer[1];
 
+  var updateSearch = function updateSearch(search) {
+    dispatch({
+      type: "UPDATE_LOCATION",
+      payload: search
+    });
+    var serializedState = JSON.stringify(search);
+    localStorage.setItem("search", serializedState);
+  };
+
   return __jsx(_search_context__WEBPACK_IMPORTED_MODULE_2__["SearchContext"].Provider, {
     value: {
       state: state,
-      dispatch: dispatch
+      dispatch: dispatch,
+      updateSearch: updateSearch
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 42,
       columnNumber: 5
     }
   }, children);
